@@ -6,10 +6,10 @@ using UnityEngine;
 public class QuizUICtrl : AnMonoBehaviour
 {
     [SerializeField] protected TextMeshProUGUI questionText;
+    public TextMeshProUGUI QuestionText => questionText;
     [SerializeField] protected List<AnswerBtn> answerButtons = new();
 
     protected static QuizUICtrl instance;
-
     public static QuizUICtrl Instance => instance;
 
     protected override void LoadComponents()
@@ -36,7 +36,7 @@ public class QuizUICtrl : AnMonoBehaviour
         for (int i = 0; i < answerButtons.Count; i++)
         {
             answerButtons[i].SetAnswerText(question.answers[i]);
-            answerButtons[i].SetAnswerIndex(question.correctIndex);
+            answerButtons[i].SetAnswerIndex(i);
         }
     }
 }

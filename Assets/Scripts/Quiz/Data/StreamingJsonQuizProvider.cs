@@ -9,22 +9,27 @@ public class StreamingJsonQuizProvider : IQuizDataProvider
         string path = System.IO.Path.Combine(
             Application.streamingAssetsPath,
             "Json",
-            $"{subjectKey}.json"
+            subjectKey + ".json"
         );
+
+#if UNITY_EDITOR || UNITY_STANDALONE
+        path = "file://" + path;   // Dong quyet dinh
+#endif
+
+        Debug.Log("JSON PATH = " + path);
 
         using UnityWebRequest request = UnityWebRequest.Get(path);
         var operation = request.SendWebRequest();
 
         while (!operation.isDone)
-            await Task.Yield(); //  async that
+            await Task.Yield();
 
         if (request.result != UnityWebRequest.Result.Success)
         {
-            Debug.LogError($"Failed to load json: {request.error}");
+            Debug.LogError("Failed to load json: " + request.error);
             return null;
         }
 
-        string json = request.downloadHandler.text;
-        return JsonUtility.FromJson<Subject>(json);
+        return JsonUtility.FromJson<Subject>(request.downloadHandler.text);
     }
 }

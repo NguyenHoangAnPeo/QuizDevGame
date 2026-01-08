@@ -6,7 +6,10 @@ using UnityEngine;
 public class AnswerBtn : BaseBtn
 {
     [SerializeField] protected TextMeshProUGUI answerText;
+    public TextMeshProUGUI AnswerText => answerText;
+
     [SerializeField] protected int answerIndex;
+    public int AnswerIndex => answerIndex;
 
     protected override void LoadComponents()
     {
@@ -20,7 +23,7 @@ public class AnswerBtn : BaseBtn
     }
     protected override void OnClick()
     {
-        throw new System.NotImplementedException();
+        QuizManager.Instance.CheckAnswer(answerIndex);
     }
     public virtual void SetAnswerText(string text)
     {

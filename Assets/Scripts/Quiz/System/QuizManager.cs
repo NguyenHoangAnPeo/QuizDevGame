@@ -3,21 +3,26 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class QuizManager : MonoBehaviour
+public class QuizManager : AnMonoBehaviour
 {
-    public static QuizManager Instance { get; private set; }
+    protected static QuizManager instance;
+    public static QuizManager Instance => instance;
 
-    private IQuizDataProvider provider;
-    private Subject currentSubject;
-    private List<Question> questions;
-    private int currentIndex;
+    [SerializeField] protected IQuizDataProvider provider;
+    [SerializeField] protected Subject currentSubject;
+    [SerializeField] protected List<Question> questions;
+    [SerializeField] protected int currentIndex;
+    [SerializeField] protected string subjectKey = "Programming";
 
-    private void Awake()
+    protected override void Awake()
     {
-        Instance = this;
-        provider = new StreamingJsonQuizProvider();
+        QuizManager.instance = this;
     }
-
+    protected override void Start()
+    {
+        provider = new StreamingJsonQuizProvider();
+        this.StartQuiz(subjectKey);
+    }
     public async void StartQuiz(string subjectKey)
     {
         currentSubject = await provider.LoadSubject(subjectKey);
@@ -25,7 +30,7 @@ public class QuizManager : MonoBehaviour
         ShowCurrentQuestion();
     }
 
-    private void PrepareQuestions()
+    protected virtual void PrepareQuestions()
     {
         questions = currentSubject.questions
             .OrderBy(x => Random.value)
@@ -35,12 +40,12 @@ public class QuizManager : MonoBehaviour
         currentIndex = 0;
     }
 
-    private void ShowCurrentQuestion()
+    protected virtual void ShowCurrentQuestion()
     {
         QuizUICtrl.Instance.ShowQuestion(questions[currentIndex]);
     }
 
-    public void Answer(int index)
+    public virtual void CheckAnswer(int index)
     {
         bool correct = questions[currentIndex].correctIndex == index;
         Debug.Log(correct ? "Correct" : "Wrong");

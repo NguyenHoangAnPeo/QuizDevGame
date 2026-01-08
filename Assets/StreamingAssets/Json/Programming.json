@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "question": "Mục đích chính của lập trình là gì?",
+      "answers": [
+        "Trang trí máy tính",
+        "Ra lệnh cho máy tính thực hiện công việc",
+        "Sử dụng Internet",
+        "Sửa chữa phần cứng"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Khi chương trình chạy từng bước theo thứ tự, thứ tự đó được gọi là gì?",
+      "answers": [
+        "Thứ tự ngẫu nhiên",
+        "Luồng thực thi",
+        "Bộ nhớ lưu trữ",
+        "Vòng lặp phần cứng"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Trường hợp nào mô tả đúng nhất về một lỗi (bug)?",
+      "answers": [
+        "Máy tính bị nhiễm virus",
+        "Chương trình chạy đúng như mong đợi",
+        "Lỗi khiến chương trình hoạt động sai",
+        "Mạng Internet chậm"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Tại sao lập trình viên sử dụng biến?",
+      "answers": [
+        "Để lưu trữ và thay đổi dữ liệu",
+        "Để trang trí code",
+        "Để làm chương trình chạy chậm hơn",
+        "Để kết nối Internet"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Nếu điều kiện trong câu lệnh IF là sai, điều gì xảy ra?",
+      "answers": [
+        "Chương trình dừng vĩnh viễn",
+        "Khối lệnh IF bị bỏ qua",
+        "Máy tính bị treo",
+        "Điều kiện tự động đúng"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Vòng lặp trong lập trình dùng để làm gì?",
+      "answers": [
+        "Lặp lại hành động một cách tự động",
+        "Lưu hình ảnh",
+        "Tăng dung lượng file",
+        "Xóa dữ liệu"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lợi ích chính của việc chia code thành các hàm là gì?",
+      "answers": [
+        "Code chạy chậm hơn",
+        "Code khó đọc hơn",
+        "Code dễ hiểu và tái sử dụng",
+        "Code tốn nhiều bộ nhớ hơn"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Một tên biến tốt nên thể hiện điều gì?",
+      "answers": [
+        "Địa chỉ bộ nhớ",
+        "Ý nghĩa hoặc mục đích sử dụng",
+        "Màu sắc của biến",
+        "Kích thước file"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nếu một vòng lặp không bao giờ dừng, vấn đề đó gọi là gì?",
+      "answers": [
+        "Vòng lặp vô hạn",
+        "Lỗi cú pháp",
+        "Lỗi biên dịch",
+        "Biến logic"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Debugging có nghĩa là gì?",
+      "answers": [
+        "Viết thêm code mới",
+        "Thiết kế giao diện",
+        "Tìm và sửa lỗi trong chương trình",
+        "Làm chương trình chạy nhanh hơn"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Tại sao chương trình cần logic?",
+      "answers": [
+        "Để đưa ra quyết định",
+        "Để làm đẹp giao diện",
+        "Để tăng dung lượng RAM",
+        "Để kết nối mạng"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Điều gì xảy ra nếu chương trình không có lỗi?",
+      "answers": [
+        "Không thể chạy",
+        "Chạy đúng như mong muốn",
+        "Luôn chạy chậm",
+        "Tự động tắt máy"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Tại sao cần kiểm tra điều kiện trước khi thực hiện một hành động?",
+      "answers": [
+        "Để tránh thực hiện sai",
+        "Để tăng kích thước chương trình",
+        "Để làm code rối hơn",
+        "Để tốn nhiều thời gian hơn"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Một chương trình tốt nên có đặc điểm nào?",
+      "answers": [
+        "Khó đọc và dài",
+        "Chạy chậm nhưng phức tạp",
+        "Dễ hiểu và dễ bảo trì",
+        "Chỉ chạy trên một máy"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Khi chương trình gặp lỗi và dừng đột ngột, đó là do đâu?",
+      "answers": [
+        "Luôn do Internet",
+        "Luôn do phần cứng",
+        "Có thể do lỗi logic hoặc lỗi code",
+        "Do người dùng không biết máy tính"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Tại sao cần viết code rõ ràng?",
+      "answers": [
+        "Để máy tính đọc nhanh hơn",
+        "Để người khác và chính mình dễ hiểu",
+        "Để tốn nhiều dòng code hơn",
+        "Để chương trình nặng hơn"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nếu cùng một đoạn code phải dùng nhiều lần, nên làm gì?",
+      "answers": [
+        "Viết lại nhiều lần",
+        "Xóa bớt code",
+        "Đưa vào hàm để tái sử dụng",
+        "Không dùng nữa"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Khi sửa một lỗi nhưng phát sinh lỗi khác, nguyên nhân thường là gì?",
+      "answers": [
+        "Do may mắn",
+        "Do sửa không hiểu rõ logic",
+        "Do máy tính yếu",
+        "Do Internet chậm"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Điều gì giúp chương trình dễ mở rộng trong tương lai?",
+      "answers": [
+        "Code viết gọn gàng, có cấu trúc",
+        "Code viết nhanh cho xong",
+        "Code không cần comment",
+        "Code chỉ chạy một lần"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lập trình giúp con người giải quyết vấn đề như thế nào?",
+      "answers": [
+        "Bằng cách suy nghĩ logic và chia nhỏ vấn đề",
+        "Bằng cách ghi nhớ nhiều cú pháp",
+        "Bằng cách dùng máy tính mạnh",
+        "Bằng cách sao chép code"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
