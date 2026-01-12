@@ -30,4 +30,8 @@ public class AnMonoBehaviour : MonoBehaviour
     {
         //For override
     }
+    protected virtual void OnDisable()
+    {
+        //For override
+    }
 }

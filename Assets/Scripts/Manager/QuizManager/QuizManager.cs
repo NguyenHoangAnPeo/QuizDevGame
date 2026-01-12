@@ -52,8 +52,19 @@ public class QuizManager : AnMonoBehaviour
 
         currentIndex++;
         if (currentIndex < questions.Count)
+        {
             ShowCurrentQuestion();
+            Debug.Log("Current index: " + currentIndex);
+        }
         else
+        {
+            this.EndGame();
             Debug.Log("Quiz Finished");
+        }
+    }
+    protected virtual void EndGame()
+    {
+        GameStateManager.Instance.SetState(GameState.EndGame);
+        return;
     }
 }

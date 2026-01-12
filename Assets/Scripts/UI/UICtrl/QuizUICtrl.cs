@@ -12,6 +12,12 @@ public class QuizUICtrl : AnMonoBehaviour
     protected static QuizUICtrl instance;
     public static QuizUICtrl Instance => instance;
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        if (GameStateManager.Instance == null) return;
+        GameStateManager.Instance.OnStateChanged += HandleStateChanged;
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -37,6 +43,13 @@ public class QuizUICtrl : AnMonoBehaviour
         {
             answerButtons[i].SetAnswerText(question.answers[i]);
             answerButtons[i].SetAnswerIndex(i);
+        }
+    }
+    protected virtual void HandleStateChanged(GameState oldState,GameState newState)
+    {
+        if(newState == GameState.PlayingQuiz)
+        {
+            
         }
     }
 }
