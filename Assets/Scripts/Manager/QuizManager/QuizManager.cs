@@ -13,6 +13,8 @@ public class QuizManager : AnMonoBehaviour
     [SerializeField] protected List<Question> questions;
     [SerializeField] protected int currentIndex;
     [SerializeField] protected string subjectKey = "Programming";
+    [SerializeField] protected int score = 0;
+    public int Score => score;
 
     protected override void Awake()
     {
@@ -49,6 +51,7 @@ public class QuizManager : AnMonoBehaviour
     {
         bool correct = questions[currentIndex].correctIndex == index;
         Debug.Log(correct ? "Correct" : "Wrong");
+        if(correct)score++;
 
         currentIndex++;
         if (currentIndex < questions.Count)

@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class ResultUICtrl : AnMonoBehaviour
 {
+    [SerializeField] protected ScoreText scoreText;
+    public ScoreText ScoreText => scoreText;
+
+    protected override void LoadComponents()
+    {
+        base.LoadComponents();
+        this.LoadScoreText();
+    }
+    protected virtual void LoadScoreText()
+    {
+        if (this.scoreText != null) return;
+        this.scoreText = transform.GetComponentInChildren<ScoreText>();
+    }
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -20,7 +33,8 @@ public class ResultUICtrl : AnMonoBehaviour
     protected virtual void HandleStateChanged(GameState oldState, GameState newState)
     {
         bool active = newState == GameState.EndGame;
-        SetActiveAllChildren(active);
+        this.SetActiveAllChildren(active);
+        this.SetScore();
     }
     protected virtual void SetActiveAllChildren(bool active)
     {
@@ -28,5 +42,16 @@ public class ResultUICtrl : AnMonoBehaviour
         {
             child.gameObject.SetActive(active);
         }
+    }
+    protected virtual void SetScore()
+    {
+        if (scoreText == null) return;
+
+        if (QuizManager.Instance != null)
+        {
+            int score = QuizManager.Instance.Score;
+            this.scoreText.SetScoreText(score);
+        }
+        else return;
     }
 }

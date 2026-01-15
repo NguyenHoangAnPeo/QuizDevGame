@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public abstract class BaseText : AnMonoBehaviour
 {
     [Header("Base Text")]
-    [SerializeField] protected TextMeshProUGUI text;
+    [SerializeField] protected TextMeshProUGUI textMeshUI;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -15,8 +15,8 @@ public abstract class BaseText : AnMonoBehaviour
     }
     protected virtual void LoadText()
     {
-        if (this.text != null) return;
-        this.text = GetComponent<TextMeshProUGUI>();
-        Debug.LogWarning($"[BaseBtn] LoadBtn {this.text.name} in {this.gameObject.name}");
+        if (this.textMeshUI != null) return;
+        this.textMeshUI = GetComponent<TextMeshProUGUI>();
+        Debug.LogWarning($"[BaseBtn] LoadBtn {this.textMeshUI.name} in {this.gameObject.name}");
     }
 }

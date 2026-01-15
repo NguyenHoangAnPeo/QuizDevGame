@@ -25,6 +25,11 @@ public class QuizUICtrl : AnMonoBehaviour
     }
     protected override void Awake()
     {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
         QuizUICtrl.instance = this;
     }
     protected virtual void LoadAnsButtons()
@@ -47,9 +52,14 @@ public class QuizUICtrl : AnMonoBehaviour
     }
     protected virtual void HandleStateChanged(GameState oldState,GameState newState)
     {
-        if(newState == GameState.PlayingQuiz)
+        bool CanSetBtn = newState == GameState.PlayingQuiz;
+        this.SetBtn(CanSetBtn);
+    }
+    protected virtual void SetBtn(bool value)
+    {
+        foreach(var btn in answerButtons)
         {
-            
+            btn.SetInteractable(value);
         }
     }
 }

@@ -33,4 +33,8 @@ public class AnswerBtn : BaseBtn
     {
         this.answerIndex = index;
     }
+    public void SetInteractable(bool value)
+    {
+        button.interactable = value;
+    }
 }
