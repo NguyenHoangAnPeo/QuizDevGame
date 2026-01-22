@@ -16,6 +16,9 @@ public class QuizManager : AnMonoBehaviour
     [SerializeField] protected int score = 0;
     public int Score => score;
 
+    [SerializeField] protected EnumResult result;
+    public EnumResult Result => result;
+
     protected override void Awake()
     {
         QuizManager.instance = this;
@@ -67,6 +70,7 @@ public class QuizManager : AnMonoBehaviour
     }
     protected virtual void EndGame()
     {
+
         GameStateManager.Instance.SetState(GameState.EndGame);
         return;
     }

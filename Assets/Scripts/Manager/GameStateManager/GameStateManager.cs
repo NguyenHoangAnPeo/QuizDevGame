@@ -23,7 +23,7 @@ public class GameStateManager : AnMonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
-
+        this.SetState(GameState.PlayingQuiz);
     }
     public virtual void SetState(GameState newState)
     {

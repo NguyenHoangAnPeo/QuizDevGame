@@ -7,6 +7,6 @@ public class ScoreText : BaseText
 
     public void SetScoreText(int score)
     {
-        this.textMeshUI.text = score.ToString();
+        this.textMeshUI.text = $"{score.ToString()}/10";
     }
 }
