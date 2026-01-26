@@ -1913,6 +1913,8 @@ GameObject:
   - component: {fileID: 1059252062}
   - component: {fileID: 1059252064}
   - component: {fileID: 1059252065}
+  - component: {fileID: 1059252067}
+  - component: {fileID: 1059252066}
   m_Layer: 5
   m_Name: ResultCtrl
   m_TagString: Untagged
@@ -1952,6 +1954,32 @@ CanvasRenderer:
   m_GameObject: {fileID: 1059252061}
   m_CullTransparentMesh: 1
 --- !u!114 &1059252065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059252061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4602da6827ba75e4e8c666160a3bc9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resultUICtrl: {fileID: 1059252067}
+--- !u!114 &1059252066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059252061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3016055805a447c44888766735736705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resultUIShow: {fileID: 1059252065}
+--- !u!114 &1059252067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2878,7 +2906,7 @@ MonoBehaviour:
   currentIndex: 0
   subjectKey: Programming
   score: 0
-  result: 0
+  enumResult: 0
 --- !u!4 &2014299843
 Transform:
   m_ObjectHideFlags: 0

@@ -16,8 +16,8 @@ public class QuizManager : AnMonoBehaviour
     [SerializeField] protected int score = 0;
     public int Score => score;
 
-    [SerializeField] protected EnumResult result;
-    public EnumResult Result => result;
+    [SerializeField] protected EnumResult enumResult;
+    public EnumResult EnumResult => enumResult;
 
     protected override void Awake()
     {
@@ -70,6 +70,9 @@ public class QuizManager : AnMonoBehaviour
     }
     protected virtual void EndGame()
     {
+        bool isWin = score >= 5;
+
+        this.enumResult = isWin ? EnumResult.Win : EnumResult.Lose;
 
         GameStateManager.Instance.SetState(GameState.EndGame);
         return;
