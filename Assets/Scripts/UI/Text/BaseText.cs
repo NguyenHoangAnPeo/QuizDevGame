@@ -8,6 +8,7 @@ public abstract class BaseText : AnMonoBehaviour
 {
     [Header("Base Text")]
     [SerializeField] protected TextMeshProUGUI textMeshUI;
+    public TextMeshProUGUI TextMeshProUGUI => textMeshUI;
     protected override void LoadComponents()
     {
         base.LoadComponents();

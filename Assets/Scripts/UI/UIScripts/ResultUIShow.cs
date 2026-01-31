@@ -8,6 +8,11 @@ public class ResultUIShow : AnMonoBehaviour
 {
     [SerializeField] protected ResultUICtrl resultUICtrl;
 
+    protected override void Start()
+    {
+        base.Start();
+        this.HideResult();
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -34,9 +39,20 @@ public class ResultUIShow : AnMonoBehaviour
         this.SetScore(score);
         bool isWin = result == EnumResult.Win;
 
-        resultUICtrl.NextLevelBtn.gameObject.SetActive(isWin);
+        resultUICtrl.NextLevelBtn.gameObject.SetActive(value && isWin);
         resultUICtrl.ReplayBtn.gameObject.SetActive(value);
         resultUICtrl.ReturnBtn.gameObject.SetActive(value);
         resultUICtrl.ScoreText.gameObject.SetActive(value);
+        Debug.Log("Show result thanh cong");
     }
+    public virtual void HideResult()
+    {
+        if (resultUICtrl == null) return;
+
+        resultUICtrl.NextLevelBtn.gameObject.SetActive(false);
+        resultUICtrl.ReplayBtn.gameObject.SetActive(false);
+        resultUICtrl.ReturnBtn.gameObject.SetActive(false);
+        resultUICtrl.ScoreText.gameObject.SetActive(false);
+    }
+
 }

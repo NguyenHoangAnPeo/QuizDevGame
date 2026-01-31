@@ -18,6 +18,11 @@ public class QuizUICtrl : AnMonoBehaviour
         if (GameStateManager.Instance == null) return;
         GameStateManager.Instance.OnStateChanged += HandleStateChanged;
     }
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        GameStateManager.Instance.OnStateChanged -= HandleStateChanged;
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();

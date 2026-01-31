@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ReturnBtn : BaseBtn
 {
     protected override void OnClick()
     {
-        throw new System.NotImplementedException();
+        SceneManager.LoadScene("SubjectSelect");
     }
 }

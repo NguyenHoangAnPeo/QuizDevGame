@@ -12,8 +12,8 @@ public class QuizManager : AnMonoBehaviour
     [SerializeField] protected Subject currentSubject;
     [SerializeField] protected List<Question> questions;
     [SerializeField] protected int currentIndex;
-    [SerializeField] protected string subjectKey = "Programming";
     [SerializeField] protected int score = 0;
+    [SerializeField] protected string subjectName;
     public int Score => score;
 
     [SerializeField] protected EnumResult enumResult;
@@ -21,18 +21,28 @@ public class QuizManager : AnMonoBehaviour
 
     protected override void Awake()
     {
-        QuizManager.instance = this;
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
     }
     protected override void Start()
     {
         provider = new StreamingJsonQuizProvider();
-        this.StartQuiz(subjectKey);
+        this.subjectName = "Programming";//QuizData.subject;
+        this.StartQuiz(subjectName);
     }
-    public async void StartQuiz(string subjectKey)
+    public async void StartQuiz(string subjectName)
     {
-        currentSubject = await provider.LoadSubject(subjectKey);
+        this.score = 0;
+        currentSubject = await provider.LoadSubject(subjectName);
+
         PrepareQuestions();
         ShowCurrentQuestion();
+
+        GameStateManager.Instance.SetState(GameState.PlayingQuiz);
     }
 
     protected virtual void PrepareQuestions()
@@ -60,7 +70,6 @@ public class QuizManager : AnMonoBehaviour
         if (currentIndex < questions.Count)
         {
             ShowCurrentQuestion();
-            Debug.Log("Current index: " + currentIndex);
         }
         else
         {
@@ -73,6 +82,8 @@ public class QuizManager : AnMonoBehaviour
         bool isWin = score >= 5;
 
         this.enumResult = isWin ? EnumResult.Win : EnumResult.Lose;
+
+        QuizResultManager.Instance.SaveScore(this.subjectName, this.score);
 
         GameStateManager.Instance.SetState(GameState.EndGame);
         return;
