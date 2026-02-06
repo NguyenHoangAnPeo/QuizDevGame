@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "question": "Cơ sở dữ liệu (Database) dùng để làm gì?",
+      "answers": [
+        "Lưu trữ và quản lý dữ liệu",
+        "Trang trí website",
+        "Chơi game",
+        "Tăng tốc Internet"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Một bảng (table) trong database dùng để làm gì?",
+      "answers": [
+        "Hiển thị giao diện",
+        "Chứa mã nguồn",
+        "Lưu dữ liệu theo hàng và cột",
+        "Kết nối mạng"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Mỗi hàng trong bảng được gọi là gì?",
+      "answers": [
+        "Bản ghi (Record)",
+        "Cột (Column)",
+        "Biến",
+        "File"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Mỗi cột trong bảng được gọi là gì?",
+      "answers": [
+        "Hàm",
+        "Vòng lặp",
+        "File",
+        "Thuộc tính (Column)"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Khóa chính (Primary Key) dùng để làm gì?",
+      "answers": [
+        "Làm đẹp database",
+        "Xác định duy nhất mỗi bản ghi",
+        "Kết nối Internet",
+        "Mở khóa máy tính"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "SQL là gì?",
+      "answers": [
+        "Hệ điều hành",
+        "Phần cứng",
+        "Ngôn ngữ truy vấn cơ sở dữ liệu",
+        "Trình duyệt web"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Lệnh SELECT trong SQL dùng để làm gì?",
+      "answers": [
+        "Lấy dữ liệu ra",
+        "Xóa dữ liệu",
+        "Thêm dữ liệu",
+        "Tạo bảng"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lệnh INSERT dùng để làm gì?",
+      "answers": [
+        "Sửa dữ liệu",
+        "Xóa dữ liệu",
+        "Thêm dữ liệu mới",
+        "Xóa bảng"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Lệnh UPDATE dùng để làm gì?",
+      "answers": [
+        "Xóa database",
+        "Sửa dữ liệu đã có",
+        "Thêm bảng mới",
+        "Tắt server"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Lệnh DELETE dùng để làm gì?",
+      "answers": [
+        "Tạo database",
+        "Sao lưu dữ liệu",
+        "Xóa dữ liệu",
+        "Hiển thị dữ liệu"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Database giúp chương trình có lợi ích gì?",
+      "answers": [
+        "Lưu dữ liệu lâu dài",
+        "Làm chương trình chậm hơn",
+        "Tăng dung lượng game",
+        "Không cần code"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Một Database có thể chứa gì?",
+      "answers": [
+        "Chỉ hình ảnh",
+        "Chỉ 1 bảng",
+        "Nhiều bảng dữ liệu",
+        "Chỉ video"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nếu không có database, dữ liệu sẽ như thế nào?",
+      "answers": [
+        "Không lưu được lâu dài",
+        "Luôn an toàn",
+        "Chạy nhanh hơn",
+        "Không cần lập trình"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quan hệ giữa các bảng trong database gọi là gì?",
+      "answers": [
+        "Loop",
+        "Function",
+        "Relationship",
+        "Logic"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Khóa ngoại (Foreign Key) dùng để làm gì?",
+      "answers": [
+        "Liên kết giữa các bảng",
+        "Xóa dữ liệu",
+        "Tăng tốc database",
+        "Mở khóa wifi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "MySQL là gì?",
+      "answers": [
+        "Ngôn ngữ lập trình",
+        "Hệ quản trị cơ sở dữ liệu",
+        "Game online",
+        "Hệ điều hành"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "phpMyAdmin dùng để làm gì?",
+      "answers": [
+        "Thiết kế UI",
+        "Quản lý database bằng giao diện web",
+        "Viết game Unity",
+        "Chơi game"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Backup database nghĩa là gì?",
+      "answers": [
+        "Xóa database",
+        "Sao lưu dữ liệu",
+        "Tạo bảng mới",
+        "Sửa dữ liệu"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nếu mất dữ liệu database, cách tốt nhất là gì?",
+      "answers": [
+        "Tắt máy",
+        "Cài lại Windows",
+        "Khôi phục từ bản sao lưu",
+        "Bỏ luôn"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Database giúp lập trình viên điều gì?",
+      "answers": [
+        "Quản lý dữ liệu lớn hiệu quả",
+        "Làm máy yếu hơn",
+        "Không cần tư duy logic",
+        "Chỉ chạy một lần"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

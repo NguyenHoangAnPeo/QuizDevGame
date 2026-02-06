@@ -12,19 +12,14 @@ public class SubjectBtn : BaseBtn
     [SerializeField] protected LastScoreText lastScoreText;
     public LastScoreText LastScoreText => lastScoreText;
 
-    protected override void Start()
-    {
-        base.Start();
-        if (QuizResultManager.Instance == null) return;
-        int score = QuizResultManager.Instance.GetScore(subjectCtrl.JsonName);
-        this.lastScoreText.TextMeshProUGUI.text = score.ToString();
-    }
-
+    [SerializeField] protected SubjectName subjectName;
+    public SubjectName SubjectName => subjectName;
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadSubjectCtrl();
         this.LoadScoreText();
+        this.LoadSubjectName();
     }
     protected virtual void LoadSubjectCtrl()
     {
@@ -36,6 +31,11 @@ public class SubjectBtn : BaseBtn
         if (this.lastScoreText != null) return;
         this.lastScoreText = transform.GetComponentInChildren<LastScoreText>();
     }
+    protected virtual void LoadSubjectName()
+    {
+        if (this.subjectName != null) return;
+        this.subjectName = transform.GetComponentInChildren<SubjectName>();
+    }
     protected virtual void SelectSubject()
     {
         QuizData.subject = subjectCtrl.JsonName;
@@ -43,16 +43,12 @@ public class SubjectBtn : BaseBtn
     }
     protected override void OnClick()
     {
-        Debug.Log("CLICK");
+        if (this.subjectCtrl == null) return;
 
-        if (this.subjectCtrl == null)
-        {
-            Debug.LogError("subjectCtrl NULL");
-            return;
-        }
-
-        Debug.Log("subject json = " + subjectCtrl.JsonName);
         this.SelectSubject();
     }
-
+    public void SetInteractable(bool value)
+    {
+        button.interactable = value;
+    }
 }

@@ -31,7 +31,7 @@ public class QuizManager : AnMonoBehaviour
     protected override void Start()
     {
         provider = new StreamingJsonQuizProvider();
-        this.subjectName = "Programming";//QuizData.subject;
+        this.subjectName = QuizData.subject;
         this.StartQuiz(subjectName);
     }
     public async void StartQuiz(string subjectName)
