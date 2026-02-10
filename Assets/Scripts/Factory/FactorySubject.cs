@@ -15,14 +15,11 @@ public class FactorySubject : AnMonoBehaviour
         base.Start();
         //this.Create("ProgrammingSubject",2);
     }
-    public void Create(string configSOName,int subjectCount)
+    public void Create(string folderMajorName,string configSOName, int levelSubj)
     {
-        for(int i = 0; i < subjectCount; i++)
-        {
             SubjectCtrl newSubject = Instantiate(subjectCtrlPrefab, this.parent);
             newSubject.transform.localScale = Vector3.one;
 
-            newSubject.InitSubjectData(configSOName);
-        }
+            newSubject.InitSubjectData(folderMajorName,configSOName,levelSubj);
     }
 }

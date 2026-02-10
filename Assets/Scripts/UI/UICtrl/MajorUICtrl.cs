@@ -25,6 +25,6 @@ public class MajorUICtrl : AnMonoBehaviour
     {
         if (this.majorName != null) return;
         this.majorName = transform.GetComponentInChildren<MajorName>();
-        majorName.SetMajorName(majorSO.majorName);
+        majorName.SetMajorName(majorSO.majorNameDisplay);
     }
 }

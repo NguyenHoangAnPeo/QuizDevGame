@@ -5,5 +5,5 @@ using UnityEngine;
 
 public interface IQuizDataProvider
 {
-   Task<Subject> LoadSubject(string subjectKey);
+   Task<Subject> LoadSubject(string subjectKey,string majorNameFolder);
 }

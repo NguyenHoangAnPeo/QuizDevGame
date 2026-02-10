@@ -4,11 +4,11 @@ using UnityEngine.Networking;
 
 public class StreamingJsonQuizProvider : IQuizDataProvider
 {
-    public async Task<Subject> LoadSubject(string subjectKey)
+    public async Task<Subject> LoadSubject(string subjectKey, string majorNameFolder)
     {
         string path = System.IO.Path.Combine(
             Application.streamingAssetsPath,
-            "Json",
+            "Json", majorNameFolder,
             subjectKey + ".json"
         );
 

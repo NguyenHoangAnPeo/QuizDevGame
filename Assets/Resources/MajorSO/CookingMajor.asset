@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01c96ae9776857d48abdb9b7d46a9f67, type: 3}
-  m_Name: ITMajor
+  m_Name: CookingMajor
   m_EditorClassIdentifier: 
-  majorName: ITMajor
-  majorNameDisplay: "C\xF4ng ngh\u1EC7 th\xF4ng tin"
-  listSubject:
-  - configSubjectName: ProgrammingSubject
-  - configSubjectName: DatabaseSubject
+  majorName: CookingMajor
+  majorNameDisplay: "Ng\xE0nh n\u1EA5u \u0103n"
+  listSubject: []

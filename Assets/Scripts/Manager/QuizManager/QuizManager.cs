@@ -32,12 +32,13 @@ public class QuizManager : AnMonoBehaviour
     {
         provider = new StreamingJsonQuizProvider();
         this.subjectName = QuizData.subject;
-        this.StartQuiz(subjectName);
+        string majorNameFolder = MajorManager.Instance.MajorSO.majorName;
+        this.StartQuiz(subjectName, majorNameFolder);
     }
-    public async void StartQuiz(string subjectName)
+    public async void StartQuiz(string subjectName, string majorNameFolder)
     {
         this.score = 0;
-        currentSubject = await provider.LoadSubject(subjectName);
+        currentSubject = await provider.LoadSubject(subjectName, majorNameFolder);
 
         PrepareQuestions();
         ShowCurrentQuestion();

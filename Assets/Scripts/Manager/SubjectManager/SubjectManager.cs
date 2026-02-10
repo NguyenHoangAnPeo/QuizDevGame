@@ -22,7 +22,14 @@ public class SubjectManager : AnMonoBehaviour
     }
     protected virtual void CreateSubject()
     {
-        factorySubject.Create(configSOName, subjectCount);
+        int subjectCount = MajorManager.Instance.MajorSO.listSubject.Count;
+        string folderMajorName = MajorManager.Instance.MajorSO.majorName;
+
+        for (int i = 0; i < subjectCount; i++)
+        {
+            this.configSOName = MajorManager.Instance.MajorSO.listSubject[i].configSubjectName;
+            factorySubject.Create(folderMajorName,configSOName,i+1);
+        }
     }
     protected override void Awake()
     {
@@ -37,9 +44,5 @@ public class SubjectManager : AnMonoBehaviour
     public virtual void SetConfigSOName(string confName)
     {
         this.configSOName = confName;
-    }
-    public virtual void SetSubjectCount(int subjCount)
-    {
-        this.subjectCount = subjCount;
     }
 }

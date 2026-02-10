@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitBtnData : AnMonoBehaviour
+public class InitBtnData : SubjectAbstract
 {
     [SerializeField] protected SubjectBtn subjectBtn;
     public SubjectBtn SubjectBtn => subjectBtn;
+
+    [SerializeField] protected int score;
+    public int Score => score;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -21,7 +24,7 @@ public class InitBtnData : AnMonoBehaviour
         subjectBtn.SubjectName.TextMeshProUGUI.text = nameSubject;
 
         if (QuizResultManager.Instance == null) return;
-        int score = QuizResultManager.Instance.GetScore(subjectBtn.SubjectCtrl.JsonName);
+        this.score = QuizResultManager.Instance.GetScore(subjectBtn.SubjectCtrl.JsonName);
         subjectBtn.LastScoreText.TextMeshProUGUI.text = score.ToString();
     }
 }
