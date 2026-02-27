@@ -6,5 +6,5 @@ using UnityEngine;
 [Serializable]
 public class SubjectData
 {
-    public string configSubjectName;
+    public SubjectConfigSO subjectConfigSO;
 }

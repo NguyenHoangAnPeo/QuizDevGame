@@ -10,6 +10,8 @@ public class QuizManager : AnMonoBehaviour
 
     [SerializeField] protected IQuizDataProvider provider;
     [SerializeField] protected Subject currentSubject;
+
+    public Subject CurrentSubject => currentSubject;
     [SerializeField] protected List<Question> questions;
     [SerializeField] protected int currentIndex;
     [SerializeField] protected int score = 0;
@@ -85,6 +87,8 @@ public class QuizManager : AnMonoBehaviour
         this.enumResult = isWin ? EnumResult.Win : EnumResult.Lose;
 
         QuizResultManager.Instance.SaveScore(this.subjectName, this.score);
+
+        SaveManager.Instance.SaveScore(this.subjectName, this.score);
 
         GameStateManager.Instance.SetState(GameState.EndGame);
         return;

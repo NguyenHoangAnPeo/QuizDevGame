@@ -908,7 +908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ng\xE0nh n\u1EA5u \u0103n"
+  m_text: Nau An
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0e5710799429754dba534930d7577cc, type: 2}
   m_sharedMaterial: {fileID: 8284445591685518613, guid: a0e5710799429754dba534930d7577cc, type: 2}
@@ -1407,6 +1407,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1615988887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615988889}
+  - component: {fileID: 1615988888}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1615988888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615988887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df2d6d0b7cf24d44946e7cd6895cc0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savePath: 
+  saveData:
+    listSubjScoreSave: []
+--- !u!4 &1615988889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615988887}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 75.61473, y: 229.34831, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1769477474
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,7 +1512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "C\xF4ng ngh\u1EC7 th\xF4ng tin"
+  m_text: Cong nghe thong tin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0e5710799429754dba534930d7577cc, type: 2}
   m_sharedMaterial: {fileID: 8284445591685518613, guid: a0e5710799429754dba534930d7577cc, type: 2}
@@ -1757,8 +1804,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1938323918}
   m_HandleRect: {fileID: 1938323917}
   m_Direction: 2
-  m_Value: 0.9999989
-  m_Size: 0.9270517
+  m_Value: 0.99999785
+  m_Size: 0.9270516
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1845,3 +1892,4 @@ SceneRoots:
   - {fileID: 1041154768}
   - {fileID: 1410699412}
   - {fileID: 1778028540}
+  - {fileID: 1615988889}

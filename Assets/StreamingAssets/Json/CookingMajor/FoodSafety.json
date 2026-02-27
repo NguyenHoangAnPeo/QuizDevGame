@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "question": "Rửa tay trước khi nấu nhằm mục đích gì?",
+      "answers": [
+        "Làm ướt tay",
+        "Loại bỏ vi khuẩn",
+        "Làm mát cơ thể",
+        "Không cần thiết"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Thực phẩm sống và chín nên để như thế nào?",
+      "answers": [
+        "Để chung",
+        "Không cần phân biệt",
+        "Để riêng",
+        "Trộn lẫn"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Bảo quản lạnh giúp gì?",
+      "answers": [
+        "Làm nóng thực phẩm",
+        "Ngăn vi khuẩn phát triển",
+        "Làm thực phẩm sống hơn",
+        "Tăng mùi"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Thịt sống nên rã đông ở đâu?",
+      "answers": [
+        "Ngoài trời nắng",
+        "Trong tủ lạnh",
+        "Dưới đất",
+        "Trong nước bẩn"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Dao dùng cho thịt sống nên như thế nào?",
+      "answers": [
+        "Dùng chung mọi thứ",
+        "Không cần rửa",
+        "Dùng riêng",
+        "Chỉ lau khô"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Thực phẩm ôi thiu có đặc điểm gì?",
+      "answers": [
+        "Mùi lạ, nhớt",
+        "Thơm hơn",
+        "Khô hơn",
+        "Không thay đổi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Nấu chín kỹ giúp gì?",
+      "answers": [
+        "Diệt vi khuẩn",
+        "Làm sống hơn",
+        "Giảm nhiệt",
+        "Không thay đổi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tủ lạnh nên giữ ở nhiệt độ nào?",
+      "answers": [
+        "Rất cao",
+        "Khoảng 0–5°C",
+        "Trên 20°C",
+        "Không cần nhiệt độ"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Đồ hộp bị phồng có nên dùng không?",
+      "answers": [
+        "Nên",
+        "Chỉ dùng một phần",
+        "Không nên",
+        "Đun sôi là được"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nước dùng để nấu ăn phải như thế nào?",
+      "answers": [
+        "Sạch",
+        "Bất kỳ",
+        "Nước ao",
+        "Nước bẩn"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Bề mặt bếp cần được gì?",
+      "answers": [
+        "Vệ sinh thường xuyên",
+        "Không cần lau",
+        "Chỉ lau khi bẩn",
+        "Không dùng nước"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Thực phẩm đông lạnh sau rã đông nên làm gì?",
+      "answers": [
+        "Cấp đông lại ngay",
+        "Nấu ngay",
+        "Để ngoài lâu",
+        "Không dùng"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Ruồi bám vào thức ăn có nguy hiểm không?",
+      "answers": [
+        "Không",
+        "Rất nguy hiểm",
+        "Chỉ hơi bẩn",
+        "Không ảnh hưởng"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Che đậy thức ăn nhằm gì?",
+      "answers": [
+        "Tránh bụi và côn trùng",
+        "Giữ nóng",
+        "Làm đẹp",
+        "Không có tác dụng"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Hạn sử dụng trên bao bì để làm gì?",
+      "answers": [
+        "Trang trí",
+        "Xác định thời gian an toàn",
+        "Không quan trọng",
+        "Tăng giá"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Ngộ độc thực phẩm thường do gì?",
+      "answers": [
+        "Vi khuẩn hoặc độc tố",
+        "Nước sạch",
+        "Không khí",
+        "Ánh sáng"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Thức ăn để ngoài quá lâu nên?",
+      "answers": [
+        "Ăn tiếp",
+        "Hâm lại là được",
+        "Bỏ đi",
+        "Cho vào tủ lạnh"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Rửa rau bằng nước sạch giúp gì?",
+      "answers": [
+        "Loại bỏ đất và vi khuẩn",
+        "Làm rau héo",
+        "Không thay đổi",
+        "Tăng độ ngọt"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Dụng cụ nấu ăn cần làm gì sau khi dùng?",
+      "answers": [
+        "Rửa sạch",
+        "Cất ngay",
+        "Không cần rửa",
+        "Phơi nắng"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "An toàn thực phẩm nhằm mục tiêu gì?",
+      "answers": [
+        "Bảo vệ sức khỏe",
+        "Làm món ngon hơn",
+        "Tăng chi phí",
+        "Không có mục tiêu"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

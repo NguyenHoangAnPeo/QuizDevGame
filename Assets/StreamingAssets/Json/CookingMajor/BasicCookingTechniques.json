@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "question": "Luộc là phương pháp nấu sử dụng gì?",
+      "answers": [
+        "Dầu ăn",
+        "Nước sôi",
+        "Lửa trực tiếp",
+        "Hơi nước lạnh"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Chiên ngập dầu cần lượng dầu như thế nào?",
+      "answers": [
+        "Rất ít dầu",
+        "Không cần dầu",
+        "Ngập hoàn toàn thực phẩm",
+        "Chỉ quét lên bề mặt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Hấp là phương pháp nấu bằng gì?",
+      "answers": [
+        "Hơi nước nóng",
+        "Dầu nóng",
+        "Lửa trực tiếp",
+        "Nước lạnh"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Xào thường dùng nhiệt độ như thế nào?",
+      "answers": [
+        "Rất thấp",
+        "Không cần nhiệt",
+        "Trung bình",
+        "Cao và nhanh"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "question": "Ninh dùng để làm gì?",
+      "answers": [
+        "Làm chín nhanh",
+        "Làm mềm thực phẩm",
+        "Tạo màu",
+        "Làm khô món ăn"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Rang khác xào ở điểm nào?",
+      "answers": [
+        "Không dùng dầu hoặc rất ít",
+        "Dùng nhiều nước",
+        "Nấu bằng hơi nước",
+        "Nấu lạnh"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Áp chảo thường dùng cho thực phẩm nào?",
+      "answers": [
+        "Món canh",
+        "Thịt cá",
+        "Rau luộc",
+        "Trái cây"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nướng sử dụng nguồn nhiệt nào?",
+      "answers": [
+        "Nhiệt khô",
+        "Nước sôi",
+        "Hơi nước",
+        "Không khí lạnh"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Kho là phương pháp nấu với đặc điểm gì?",
+      "answers": [
+        "Nhiều nước loãng",
+        "Không gia vị",
+        "Ít nước và đậm vị",
+        "Không cần nhiệt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Chần thực phẩm nhằm mục đích gì?",
+      "answers": [
+        "Làm sống hơn",
+        "Làm sạch và sơ chế nhanh",
+        "Làm cháy bề mặt",
+        "Tăng độ cứng"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nấu canh cần lượng nước như thế nào?",
+      "answers": [
+        "Vừa đủ hoặc nhiều",
+        "Không cần nước",
+        "Rất ít",
+        "Chỉ dầu"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Om là phương pháp nấu gì?",
+      "answers": [
+        "Nấu khô hoàn toàn",
+        "Nấu nhanh",
+        "Nấu với ít nước và đậy kín",
+        "Không dùng nhiệt"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Quay thường áp dụng cho loại thực phẩm nào?",
+      "answers": [
+        "Gia cầm nguyên con",
+        "Canh rau",
+        "Cơm",
+        "Trái cây"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Trụng mì là gì?",
+      "answers": [
+        "Ngâm nước lạnh",
+        "Nấu khô",
+        "Nhúng vào nước sôi nhanh",
+        "Chiên dầu"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Rim thực phẩm nhằm mục đích gì?",
+      "answers": [
+        "Làm cháy",
+        "Làm thấm gia vị",
+        "Làm sống",
+        "Làm đông đá"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nấu chậm ở nhiệt thấp giúp gì?",
+      "answers": [
+        "Mềm và đậm vị hơn",
+        "Làm khô nhanh",
+        "Làm sống",
+        "Không thay đổi gì"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Xông khói tạo ra điều gì?",
+      "answers": [
+        "Màu xanh",
+        "Hương vị đặc trưng",
+        "Làm lạnh",
+        "Làm mềm nước"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nấu áp suất giúp gì?",
+      "answers": [
+        "Chín nhanh hơn",
+        "Làm thực phẩm sống",
+        "Giảm nhiệt",
+        "Không thay đổi"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Làm nguội nhanh thực phẩm sau khi nấu nhằm gì?",
+      "answers": [
+        "Giữ an toàn thực phẩm",
+        "Làm hỏng món ăn",
+        "Tăng độ sống",
+        "Giảm dinh dưỡng"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Sơ chế là bước nào?",
+      "answers": [
+        "Chuẩn bị trước khi nấu",
+        "Trang trí món ăn",
+        "Ăn thử",
+        "Bảo quản lâu dài"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}

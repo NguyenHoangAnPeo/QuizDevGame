@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class SubjectManager : AnMonoBehaviour
@@ -27,8 +28,8 @@ public class SubjectManager : AnMonoBehaviour
 
         for (int i = 0; i < subjectCount; i++)
         {
-            this.configSOName = MajorManager.Instance.MajorSO.listSubject[i].configSubjectName;
-            factorySubject.Create(folderMajorName,configSOName,i+1);
+            this.configSOName = MajorManager.Instance.MajorSO.listSubject[i].subjectConfigSO.subjectName;
+            factorySubject.Create(folderMajorName, configSOName, i + 1);
         }
     }
     protected override void Awake()

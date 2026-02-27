@@ -27,8 +27,7 @@ public class SubjectCtrl : AnMonoBehaviour
     protected override void Start()
     {
         base.Start();
-
-       //PlayerPrefs.SetInt("UnlockedLevel", 1);
+        this.ResetLevel();
         this.SetUnlockedLevel();
         this.SetSubjBtnInteractable();
     }
@@ -40,10 +39,13 @@ public class SubjectCtrl : AnMonoBehaviour
         if (score >= 5)
         {
             int unlockedLevel = this.levelSubject + 1; //neu qua level hien tai thi man mo khoa la cai tiep theo
-            PlayerPrefs.SetInt("UnlockedLevel", unlockedLevel);
+            string levelMajorName = MajorManager.Instance.MajorSO.majorName; // Set level bang ten Nganh
+
+            LevelManager.Instance.SetLevelSubj(levelMajorName, unlockedLevel);
 
             Debug.Log("Current UnlockedLevel = " + unlockedLevel);
         }
+        return;
     }
     protected override void LoadComponents()
     {
@@ -71,7 +73,7 @@ public class SubjectCtrl : AnMonoBehaviour
     public virtual void InitSubjectData(string folderMajorName, string configSOName ,int levelSubj) //folderMajorName chua subject cua rieng nganh do
     {
         if (this.subjectConfig != null) return;
-        this.subjectConfig = Resources.Load<SubjectConfigSO>("SubjectConfig/" +folderMajorName+"/"+ configSOName);
+        this.subjectConfig = Resources.Load<SubjectConfigSO>("SubjectConfig/" + folderMajorName + "/" + configSOName);
 
         this.LoadJsonName();
         initBtnData.InitData(subjectConfig.displayName);
@@ -80,10 +82,17 @@ public class SubjectCtrl : AnMonoBehaviour
     }
     protected virtual void SetSubjBtnInteractable()
     {
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
+        string levelMajorName = MajorManager.Instance.MajorSO.majorName;
+        int unlockedLevel = PlayerPrefs.GetInt(levelMajorName, 1);
 
         this.IsUnlock = levelSubject <= unlockedLevel;
 
         SubjectBtn.SetInteractable(IsUnlock);
+    }
+    protected virtual void ResetLevel()
+    {
+        string levelMajorName = MajorManager.Instance.MajorSO.majorName;
+
+        LevelManager.Instance.SetLevelSubj(levelMajorName, 1);
     }
 }

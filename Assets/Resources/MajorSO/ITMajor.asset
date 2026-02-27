@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ITMajor
   m_EditorClassIdentifier: 
   majorName: ITMajor
-  majorNameDisplay: "C\xF4ng ngh\u1EC7 th\xF4ng tin"
+  majorNameDisplay: Cong nghe thong tin
   listSubject:
-  - configSubjectName: ProgrammingSubject
-  - configSubjectName: DatabaseSubject
+  - subjectConfigSO: {fileID: 11400000, guid: 62e04481d4a6dad4ab0a9867735d3e8b, type: 2}
+  - subjectConfigSO: {fileID: 11400000, guid: 18c6a8253d9a9244c9d7d98be5fa2f74, type: 2}

@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: CookingMajor
   m_EditorClassIdentifier: 
   majorName: CookingMajor
-  majorNameDisplay: "Ng\xE0nh n\u1EA5u \u0103n"
-  listSubject: []
+  majorNameDisplay: Nau An
+  listSubject:
+  - subjectConfigSO: {fileID: 11400000, guid: a82032fa786366e40b196e3c53973167, type: 2}
+  - subjectConfigSO: {fileID: 11400000, guid: b132ea95fc950064ebb3d0c5c12fff23, type: 2}
