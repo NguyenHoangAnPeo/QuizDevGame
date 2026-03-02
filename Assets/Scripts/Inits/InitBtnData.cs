@@ -19,12 +19,14 @@ public class InitBtnData : SubjectAbstract
         if (this.subjectBtn != null) return;
         this.subjectBtn = transform.GetComponent<SubjectBtn>();
     }
-    public virtual void InitData(string nameSubject)
+    public virtual void InitData(string nameSubjectDisplay,string nameSubjJson)
     {
-        subjectBtn.SubjectName.TextMeshProUGUI.text = nameSubject;
+        subjectBtn.SubjectName.TextMeshProUGUI.text = nameSubjectDisplay;
 
-        if (QuizResultManager.Instance == null) return;
-        this.score = QuizResultManager.Instance.GetScore(subjectBtn.SubjectCtrl.JsonName);
+        this.score = SaveManager.Instance.GetScore(nameSubjJson);
         subjectBtn.LastScoreText.TextMeshProUGUI.text = score.ToString();
+        //if (QuizResultManager.Instance == null) return;
+        //this.score = QuizResultManager.Instance.GetScore(subjectBtn.SubjectCtrl.JsonName);
+        //subjectBtn.LastScoreText.TextMeshProUGUI.text = score.ToString();
     }
 }

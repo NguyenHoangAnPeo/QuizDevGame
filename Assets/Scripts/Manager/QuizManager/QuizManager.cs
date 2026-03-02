@@ -10,7 +10,6 @@ public class QuizManager : AnMonoBehaviour
 
     [SerializeField] protected IQuizDataProvider provider;
     [SerializeField] protected Subject currentSubject;
-
     public Subject CurrentSubject => currentSubject;
     [SerializeField] protected List<Question> questions;
     [SerializeField] protected int currentIndex;
@@ -33,7 +32,7 @@ public class QuizManager : AnMonoBehaviour
     protected override void Start()
     {
         provider = new StreamingJsonQuizProvider();
-        this.subjectName = QuizData.subject;
+        this.subjectName = QuizData.subjectName;
         string majorNameFolder = MajorManager.Instance.MajorSO.majorName;
         this.StartQuiz(subjectName, majorNameFolder);
     }

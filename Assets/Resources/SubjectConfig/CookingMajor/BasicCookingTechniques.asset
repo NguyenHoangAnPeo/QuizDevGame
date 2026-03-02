@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexLevel: 1
   subjectName: BasicCookingTechniques
-  displayName: Ki thuat che bien thuc an
+  displayName: "K\u0129 thu\u1EADt ch\u1EBF bi\u1EBFn th\u1EE9c \u0103n"
   icon: {fileID: 0}
   passScore: 5

@@ -38,7 +38,7 @@ public class SubjectBtn : BaseBtn
     }
     protected virtual void SelectSubject()
     {
-        QuizData.subject = subjectCtrl.JsonName;
+        QuizData.subjectName = subjectCtrl.JsonName;
         SceneManager.LoadScene("QuizScene");
     }
     protected override void OnClick()

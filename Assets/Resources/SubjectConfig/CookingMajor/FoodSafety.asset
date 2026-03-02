@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indexLevel: 2
   subjectName: FoodSafety
-  displayName: Ve sinh an toan thuc pham
+  displayName: "V\u1EC7 sinh an to\xE0n th\u1EF1c ph\u1EA9m"
   icon: {fileID: 0}
   passScore: 5

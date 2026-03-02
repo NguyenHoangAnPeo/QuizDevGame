@@ -5,5 +5,5 @@ using UnityEngine;
 public static class QuizData
 {
     public static string majorNameFolder;
-    public static string subject;
+    public static string subjectName;
 }

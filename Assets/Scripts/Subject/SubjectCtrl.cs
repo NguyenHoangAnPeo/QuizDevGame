@@ -27,7 +27,7 @@ public class SubjectCtrl : AnMonoBehaviour
     protected override void Start()
     {
         base.Start();
-        this.ResetLevel();
+        //this.ResetLevel();
         this.SetUnlockedLevel();
         this.SetSubjBtnInteractable();
     }
@@ -76,7 +76,7 @@ public class SubjectCtrl : AnMonoBehaviour
         this.subjectConfig = Resources.Load<SubjectConfigSO>("SubjectConfig/" + folderMajorName + "/" + configSOName);
 
         this.LoadJsonName();
-        initBtnData.InitData(subjectConfig.displayName);
+        initBtnData.InitData(subjectConfig.displayName,subjectConfig.subjectName);
 
         this.levelSubject = levelSubj;
     }

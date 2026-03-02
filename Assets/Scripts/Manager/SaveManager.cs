@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class SaveManager : AnMonoBehaviour
@@ -22,15 +23,16 @@ public class SaveManager : AnMonoBehaviour
         {
             Destroy(gameObject);
         }
+        this.LoadGame();
     }
     public virtual void SaveGame()
     {
         string jsonSave = JsonUtility.ToJson(saveData, true);
-        File.WriteAllText(savePath, jsonSave);
+        File.WriteAllText(this.savePath, jsonSave);
     }
     public virtual void LoadGame()
     {
-        if (File.Exists(savePath))
+        if (File.Exists(this.savePath))
         {
             string json = File.ReadAllText(savePath);
             //saveData = JsonUtility.FromJson<SaveData>(json);
@@ -38,6 +40,13 @@ public class SaveManager : AnMonoBehaviour
             saveData = loaded ?? new SaveData();
             if (saveData.listSubjScoreSave == null) saveData.listSubjScoreSave = new List<SaveDataSubject>();
         }
+    }
+    public int GetScore(string subjectName)
+    {
+        var subj = saveData.listSubjScoreSave
+            .FirstOrDefault(s => s.subjectName == subjectName);
+
+        return subj != null ? subj.scoreSubj : 0;
     }
     public void SaveScore(string subjectName, int score)
     {
