@@ -35,7 +35,7 @@ public class SaveManager : AnMonoBehaviour
         if (File.Exists(this.savePath))
         {
             string json = File.ReadAllText(savePath);
-            //saveData = JsonUtility.FromJson<SaveData>(json);
+            saveData = JsonUtility.FromJson<SaveData>(json);
             var loaded = JsonUtility.FromJson<SaveData>(json);
             saveData = loaded ?? new SaveData();
             if (saveData.listSubjScoreSave == null) saveData.listSubjScoreSave = new List<SaveDataSubject>();
@@ -69,5 +69,6 @@ public class SaveManager : AnMonoBehaviour
         }
 
         this.SaveGame(); // ghi file JSON
+        Debug.Log("Diem so mon" + subjectName + " da luu: " + score);
     }
 }

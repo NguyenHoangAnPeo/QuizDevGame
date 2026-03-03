@@ -34,7 +34,7 @@ public class LevelManager : AnMonoBehaviour
         var major = MajorManager.Instance?.MajorSO;
         string current = QuizData.subjectName;
         int idx = major.listSubject.FindIndex(x => x.subjectConfigSO.subjectName == current);
-        if (!CheckListSubject(major) || !CheckCurrentSubject(major,idx))
+        if (CheckListSubject(major) && CheckCurrentSubject(major,idx))
         {
             QuizData.subjectName = major.listSubject[idx + 1].subjectConfigSO.subjectName;
         }

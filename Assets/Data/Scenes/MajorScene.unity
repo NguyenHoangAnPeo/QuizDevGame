@@ -908,7 +908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nau An
+  m_text: "Ng\xE0nh N\u1EA5u \u0102n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0e5710799429754dba534930d7577cc, type: 2}
   m_sharedMaterial: {fileID: 8284445591685518613, guid: a0e5710799429754dba534930d7577cc, type: 2}
@@ -1203,8 +1203,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1051170538}
   m_HandleRect: {fileID: 1051170537}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.99999994
+  m_Value: 1
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1448,7 +1448,7 @@ Transform:
   m_GameObject: {fileID: 1615988887}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.61473, y: 229.34831, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cong nghe thong tin
+  m_text: "C\xF4ng Ngh\u1EC7 Th\xF4ng Tin"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0e5710799429754dba534930d7577cc, type: 2}
   m_sharedMaterial: {fileID: 8284445591685518613, guid: a0e5710799429754dba534930d7577cc, type: 2}
@@ -1804,8 +1804,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1938323918}
   m_HandleRect: {fileID: 1938323917}
   m_Direction: 2
-  m_Value: 0.99999785
-  m_Size: 0.9270516
+  m_Value: 1
+  m_Size: 0.9270517
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

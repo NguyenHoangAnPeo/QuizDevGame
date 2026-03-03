@@ -1,0 +1,204 @@
+{
+  "questions": [
+    {
+      "question": "Bột mì thường dùng trong làm bánh ngọt là loại nào?",
+      "answers": [
+        "Bread flour",
+        "Cake flour",
+        "Whole wheat flour",
+        "Corn flour"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Men nở (yeast) có tác dụng gì trong làm bánh?",
+      "answers": [
+        "Tạo màu cho bánh",
+        "Làm bánh có vị mặn",
+        "Giúp bánh nở nhờ sinh khí CO2",
+        "Làm bánh cứng hơn"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Nhiệt độ lò nướng ảnh hưởng chủ yếu đến điều gì?",
+      "answers": [
+        "Độ nở và màu sắc của bánh",
+        "Giá thành bánh",
+        "Kích thước khay",
+        "Số lượng nguyên liệu"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tại sao cần rây bột trước khi trộn?",
+      "answers": [
+        "Để bột mịn và không bị vón cục",
+        "Để bột nặng hơn",
+        "Để tiết kiệm thời gian",
+        "Để làm bột ướt hơn"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Baking powder khác baking soda ở điểm nào?",
+      "answers": [
+        "Baking powder có sẵn axit trong thành phần",
+        "Baking soda có vị ngọt",
+        "Baking powder không giúp bánh nở",
+        "Hai loại hoàn toàn giống nhau"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Khi đánh trứng quá lâu, điều gì có thể xảy ra?",
+      "answers": [
+        "Trứng đặc lại quá mức",
+        "Trứng chuyển màu xanh",
+        "Trứng tự nở",
+        "Không có thay đổi gì"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Bơ ở nhiệt độ phòng giúp điều gì khi làm bánh?",
+      "answers": [
+        "Khó trộn hơn",
+        "Dễ đánh bông và hòa quyện",
+        "Làm bánh mặn hơn",
+        "Giảm thời gian nướng"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Tại sao không nên mở lò nướng quá sớm?",
+      "answers": [
+        "Làm giảm nhiệt và bánh có thể xẹp",
+        "Làm bánh cháy nhanh hơn",
+        "Tăng độ ngọt của bánh",
+        "Không ảnh hưởng gì"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Thành phần nào giúp tạo cấu trúc chính cho bánh?",
+      "answers": [
+        "Đường",
+        "Muối",
+        "Bột mì",
+        "Nước"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "question": "Khi bánh bị khô, nguyên nhân thường là gì?",
+      "answers": [
+        "Nướng quá lâu",
+        "Thiếu muối",
+        "Thiếu khuôn",
+        "Dùng ít đường"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tác dụng của đường trong bánh là gì?",
+      "answers": [
+        "Tạo vị ngọt và giúp giữ ẩm",
+        "Làm bánh cứng hơn",
+        "Giảm độ nở",
+        "Tạo vị chua"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Khi trộn bột quá kỹ sau khi thêm bột mì, điều gì xảy ra?",
+      "answers": [
+        "Bánh mềm hơn",
+        "Bánh dai do phát triển gluten quá mức",
+        "Bánh ngọt hơn",
+        "Không ảnh hưởng gì"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Muối có vai trò gì trong làm bánh?",
+      "answers": [
+        "Tăng hương vị và cân bằng vị ngọt",
+        "Làm bánh ngọt hơn",
+        "Làm bánh nở nhanh hơn",
+        "Không có vai trò"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Kiểm tra bánh chín bằng cách nào?",
+      "answers": [
+        "Dùng tăm xiên vào giữa bánh",
+        "Nhìn màu khay",
+        "Lắc lò nướng",
+        "Đếm số phút bất kỳ"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tại sao cần cân đo nguyên liệu chính xác?",
+      "answers": [
+        "Để đảm bảo kết cấu và hương vị đúng",
+        "Để làm bánh to hơn",
+        "Để tiết kiệm điện",
+        "Để bánh nặng hơn"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Creaming method là gì?",
+      "answers": [
+        "Đun nóng kem tươi",
+        "Trộn bơ và đường đến khi bông nhẹ",
+        "Đánh trứng riêng lẻ",
+        "Trộn tất cả nguyên liệu cùng lúc"
+      ],
+      "correctIndex": 1
+    },
+    {
+      "question": "Nếu bánh không nở, nguyên nhân có thể là gì?",
+      "answers": [
+        "Men hoặc baking powder hết hạn",
+        "Dùng khuôn tròn",
+        "Lò nướng sạch",
+        "Có thêm đường"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Nướng bánh ở rãnh giữa lò giúp điều gì?",
+      "answers": [
+        "Nhiệt phân bố đều",
+        "Làm bánh chín một mặt",
+        "Giảm kích thước bánh",
+        "Tăng độ mặn"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Tại sao cần để bánh nguội trước khi cắt?",
+      "answers": [
+        "Để cấu trúc ổn định và không bị vỡ",
+        "Để bánh ngọt hơn",
+        "Để bánh nở thêm",
+        "Không cần thiết"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Shortening có tác dụng gì trong bánh?",
+      "answers": [
+        "Làm bánh mềm và xốp hơn",
+        "Làm bánh cứng hơn",
+        "Tăng độ mặn",
+        "Giảm thời gian trộn"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
