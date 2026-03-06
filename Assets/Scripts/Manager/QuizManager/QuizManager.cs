@@ -65,7 +65,7 @@ public class QuizManager : AnMonoBehaviour
     public virtual void CheckAnswer(int index)
     {
         bool correct = questions[currentIndex].correctIndex == index;
-        if(correct)score++;
+        if (correct) score++;
 
         currentIndex++;
         if (currentIndex < questions.Count)

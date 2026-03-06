@@ -8,6 +8,7 @@ public enum GameState
     MainMenu,
     SelectingSubject,
     PlayingQuiz,
+    CheckAnswerDone,
     EndGame,
     ShowingResult,
     Paused

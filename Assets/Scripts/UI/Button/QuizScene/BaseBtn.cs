@@ -26,7 +26,19 @@ public abstract class BaseBtn : AnMonoBehaviour
     }
     protected virtual void AddOnclickEvent()
     {
-        this.button.onClick.AddListener(this.OnClick);
+        this.button.onClick.RemoveListener(this.HandleClick);
+        this.button.onClick.AddListener(this.HandleClick);
+    }
+
+    protected virtual void HandleClick()
+    {
+        this.PlayClickFeedback();
+        this.OnClick();
+    }
+
+    protected virtual void PlayClickFeedback()
+    {
+        UIAnimationUtil.PunchScale(this, transform, 0.06f, 0.12f);
     }
     protected abstract void OnClick();
 }

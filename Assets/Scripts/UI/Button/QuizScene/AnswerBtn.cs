@@ -13,10 +13,23 @@ public class AnswerBtn : BaseBtn
     public int AnswerIndex => answerIndex;
 
     [SerializeField] protected RectTransform rectTransform;
+
+    [SerializeField] protected QuizUICtrl quizUICtrl;
     protected override void LoadComponents()
     {
         base.LoadComponents();
         this.LoadAnswerText();
+        this.LoadQuizUICtrl();
+    }
+    protected virtual void LoadQuizUICtrl()
+    {
+        if (this.quizUICtrl != null) return;
+        this.quizUICtrl = transform.GetComponentInParent<QuizUICtrl>();
+    }
+    protected virtual void LoadRect()
+    {
+        if (this.rectTransform != null) return;
+        this.rectTransform = transform.GetComponent<RectTransform>();
     }
     protected virtual void LoadAnswerText()
     {
@@ -25,32 +38,8 @@ public class AnswerBtn : BaseBtn
     }
     protected override void OnClick()
     {
-        StartCoroutine(ClickRoutine());
-    //QuizManager.Instance.CheckAnswer(answerIndex);
-    }
-    private IEnumerator ClickRoutine()
-    {
-        SetInteractable(false);
-
-        Vector3 originalScale = rectTransform.localScale;
-        Vector3 pressedScale = originalScale * 0.9f;
-
-        yield return UITransitionService.Instance.ScalePop(
-            rectTransform,
-            originalScale,
-            pressedScale,
-            0.2f
-        );
-
-        yield return UITransitionService.Instance.ScalePop(
-            rectTransform,
-            pressedScale,
-            originalScale,
-            0.2f
-        );
-
+        StartCoroutine(this.quizUICtrl.ClickAnswer(button,rectTransform));
         QuizManager.Instance.CheckAnswer(answerIndex);
-        SetInteractable(true);
     }
     public virtual void SetAnswerText(string text)
     {
