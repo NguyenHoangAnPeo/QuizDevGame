@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SubjectBtn : BaseBtn
 {
+    [SerializeField] protected float sceneLoadDelay = 0.12f;
+
     [SerializeField] protected SubjectCtrl subjectCtrl;
     public SubjectCtrl SubjectCtrl => subjectCtrl;
 
@@ -14,6 +16,8 @@ public class SubjectBtn : BaseBtn
 
     [SerializeField] protected SubjectName subjectName;
     public SubjectName SubjectName => subjectName;
+
+    protected bool isHandlingClick;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -39,7 +43,7 @@ public class SubjectBtn : BaseBtn
     protected virtual void SelectSubject()
     {
         QuizData.subjectName = subjectCtrl.JsonName;
-        SceneManager.LoadScene("QuizScene");
+        StartCoroutine(StartQuiz());
     }
     protected override void OnClick()
     {
@@ -47,8 +51,33 @@ public class SubjectBtn : BaseBtn
 
         this.SelectSubject();
     }
+
+    protected override void HandleClick()
+    {
+        if (isHandlingClick) return;
+        StartCoroutine(this.CoHandleSceneClick());
+    }
+
+    protected virtual IEnumerator CoHandleSceneClick()
+    {
+        isHandlingClick = true;
+
+        if (button != null) button.interactable = false;
+        yield return this.CoHandleClickWithDelay(sceneLoadDelay);
+
+        if (button != null) button.interactable = true;
+        isHandlingClick = false;
+    }
     public void SetInteractable(bool value)
     {
         button.interactable = value;
+    }
+    IEnumerator StartQuiz()
+    {
+        GameManager.Instance.EndTransitionScene();
+
+        yield return new WaitForSeconds(1.2f);
+
+        SceneManager.LoadScene("QuizScene");
     }
 }

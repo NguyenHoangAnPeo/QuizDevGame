@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +24,7 @@ public class InitBtnData : SubjectAbstract
         subjectBtn.SubjectName.TextMeshProUGUI.text = nameSubjectDisplay;
 
         this.score = SaveManager.Instance.GetScore(nameSubjJson);
-        subjectBtn.LastScoreText.TextMeshProUGUI.text = score.ToString();
+        subjectBtn.LastScoreText.TextMeshProUGUI.text = "Điểm cao nhất: " + score.ToString();
         //if (QuizResultManager.Instance == null) return;
         //this.score = QuizResultManager.Instance.GetScore(subjectBtn.SubjectCtrl.JsonName);
         //subjectBtn.LastScoreText.TextMeshProUGUI.text = score.ToString();

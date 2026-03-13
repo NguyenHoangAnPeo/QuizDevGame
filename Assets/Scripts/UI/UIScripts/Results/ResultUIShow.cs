@@ -71,6 +71,7 @@ public class ResultUIShow : AnMonoBehaviour
         resultUICtrl.ReplayBtn.gameObject.SetActive(value);
         resultUICtrl.ReturnBtn.gameObject.SetActive(value);
         resultUICtrl.ScoreText.gameObject.SetActive(value);
+        resultUICtrl.panelBlock.SetActive(value);
 
         if (value)
         {
@@ -94,7 +95,8 @@ public class ResultUIShow : AnMonoBehaviour
         resultUICtrl.NextLevelBtn.gameObject.SetActive(false);
         resultUICtrl.ReplayBtn.gameObject.SetActive(false);
         resultUICtrl.ReturnBtn.gameObject.SetActive(false);
-        resultUICtrl.ScoreText.gameObject.SetActive(false);   
+        resultUICtrl.ScoreText.gameObject.SetActive(false);
+        resultUICtrl.panelBlock.SetActive(false);
 
         if (canvasGroup != null) canvasGroup.alpha = 0f;
     }

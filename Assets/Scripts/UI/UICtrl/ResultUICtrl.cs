@@ -17,6 +17,8 @@ public class ResultUICtrl : AnMonoBehaviour
 
     [SerializeField] protected ReplayBtn replayBtn;
     public ReplayBtn ReplayBtn => replayBtn;
+
+    [SerializeField] public GameObject panelBlock;
     protected override void LoadComponents()
     {
         base.LoadComponents();

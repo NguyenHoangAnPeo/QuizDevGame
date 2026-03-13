@@ -22,10 +22,24 @@ public abstract class BaseBtn : AnMonoBehaviour
     {
         if (this.button != null) return;
         this.button = GetComponent<Button>();
-        Debug.LogWarning($"[BaseBtn] LoadBtn {this.button.name} in {this.gameObject.name}");
+
+        if (this.button == null)
+        {
+            this.button = GetComponentInChildren<Button>();
+        }
+
+        if (this.button != null)
+        {
+            Debug.LogWarning($"[BaseBtn] LoadBtn {this.button.name} in {this.gameObject.name}");
+        }
+        else
+        {
+            Debug.LogError($"[BaseBtn] Missing Button component in {this.gameObject.name}");
+        }
     }
     protected virtual void AddOnclickEvent()
     {
+        if (this.button == null) return;    
         this.button.onClick.RemoveListener(this.HandleClick);
         this.button.onClick.AddListener(this.HandleClick);
     }
@@ -35,6 +49,18 @@ public abstract class BaseBtn : AnMonoBehaviour
         this.PlayClickFeedback();
         this.OnClick();
     }
+    protected virtual IEnumerator CoHandleClickWithDelay(float delay)
+    {
+        this.PlayClickFeedback();
+
+        if (delay > 0f)
+        {
+            yield return new WaitForSecondsRealtime(delay);
+        }
+
+        this.OnClick();
+    }
+
 
     protected virtual void PlayClickFeedback()
     {

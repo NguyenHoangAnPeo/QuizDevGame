@@ -59,7 +59,7 @@ public class QuizManager : AnMonoBehaviour
 
     protected virtual void ShowCurrentQuestion()
     {
-        QuizUICtrl.Instance.ShowQuestion(questions[currentIndex]);
+        QuizUICtrl.Instance.ShowQuestion(questions[currentIndex],currentIndex + 1);
     }
 
     public virtual void CheckAnswer(int index)

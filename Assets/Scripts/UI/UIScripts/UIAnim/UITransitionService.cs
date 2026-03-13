@@ -1,11 +1,17 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UITransitionService : AnMonoBehaviour
 {
+    protected readonly Dictionary<object, Coroutine> activeTransitions = new Dictionary<object, Coroutine>();
+
+    protected const string AutoServiceName = "UITransitionService_Auto";
+    protected static bool isCreatingAutoInstance;
+
     [Header("Scene Lifetime")]
-    [SerializeField] protected bool persistAcrossScenes = false;
+    [SerializeField] protected bool persistAcrossScenes = true;
 
     [Header("Standard Duration")]
     [SerializeField] protected float quickDuration = 0.2f;
@@ -30,12 +36,27 @@ public class UITransitionService : AnMonoBehaviour
             if (instance != null) return instance;
 
             instance = FindObjectOfType<UITransitionService>();
-            if (instance != null) return instance;
+            if (instance != null)
+            {
+                instance.ForcePersistAcrossScenes();
+                return instance;
+            }
 
-            GameObject serviceObj = new GameObject("UITransitionService_Auto");
+            isCreatingAutoInstance = true;
+            GameObject serviceObj = new GameObject(AutoServiceName);
+
             instance = serviceObj.AddComponent<UITransitionService>();
+            isCreatingAutoInstance = false;
+
+            instance.ForcePersistAcrossScenes();
             return instance;
         }
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    protected static void Bootstrap()
+    {
+        _ = Instance;
     }
 
     protected override void Awake()
@@ -49,12 +70,16 @@ public class UITransitionService : AnMonoBehaviour
 
         instance = this;
 
-        if (persistAcrossScenes)
+        if (persistAcrossScenes || isCreatingAutoInstance)
         {
             DontDestroyOnLoad(gameObject);
         }
     }
-
+    protected virtual void ForcePersistAcrossScenes()
+    {
+        persistAcrossScenes = true;
+        DontDestroyOnLoad(gameObject);
+    }
     protected virtual void OnDestroy()
     {
         if (instance == this)
@@ -65,7 +90,7 @@ public class UITransitionService : AnMonoBehaviour
 
     public virtual Coroutine Fade(CanvasGroup canvasGroup, float from, float to, float duration, Action onCompleted = null)
     {
-        return StartCoroutine(CoFade(canvasGroup, from, to, duration, fadeCurve, onCompleted));
+        return StartManagedTransition(canvasGroup, CoFade(canvasGroup, from, to, duration, fadeCurve, onCompleted));
     }
 
     public virtual Coroutine FadeQuick(CanvasGroup canvasGroup, float from, float to, Action onCompleted = null)
@@ -85,7 +110,7 @@ public class UITransitionService : AnMonoBehaviour
 
     public virtual Coroutine ScalePop(RectTransform rectTransform, Vector3 from, Vector3 to, float duration, Action onCompleted = null)
     {
-        return StartCoroutine(CoScale(rectTransform, from, to, duration, popCurve, onCompleted));
+        return StartManagedTransition(rectTransform, CoScale(rectTransform, from, to, duration, popCurve, onCompleted));
     }
 
     public virtual Coroutine ScalePopNormal(RectTransform rectTransform, Vector3 from, Vector3 to, Action onCompleted = null)
@@ -95,7 +120,7 @@ public class UITransitionService : AnMonoBehaviour
 
     public virtual Coroutine Slide(RectTransform rectTransform, Vector2 from, Vector2 to, float duration, Action onCompleted = null)
     {
-        return StartCoroutine(CoSlide(rectTransform, from, to, duration, slideCurve, onCompleted));
+        return StartManagedTransition(rectTransform, CoSlide(rectTransform, from, to, duration, slideCurve, onCompleted));
     }
 
     public virtual Coroutine SlideNormal(RectTransform rectTransform, Vector2 from, Vector2 to, Action onCompleted = null)
@@ -138,22 +163,31 @@ public class UITransitionService : AnMonoBehaviour
 
         if (duration <= 0f)
         {
-            rectTransform.localScale = to;
+            if (rectTransform != null)
+                rectTransform.localScale = to;
+
             onCompleted?.Invoke();
             yield break;
         }
 
         float time = 0f;
+
         while (time < duration)
         {
+            if (rectTransform == null) yield break; 
+
             time += Time.unscaledDeltaTime;
             float progress = Mathf.Clamp01(time / duration);
             float evaluate = curve.Evaluate(progress);
+
             rectTransform.localScale = Vector3.LerpUnclamped(from, to, evaluate);
+
             yield return null;
         }
 
-        rectTransform.localScale = to;
+        if (rectTransform != null)
+            rectTransform.localScale = to;
+
         onCompleted?.Invoke();
     }
 
@@ -182,5 +216,36 @@ public class UITransitionService : AnMonoBehaviour
 
         rectTransform.anchoredPosition = to;
         onCompleted?.Invoke();
+    }
+    protected virtual Coroutine StartManagedTransition(object key, IEnumerator routine)
+    {
+        if (key == null || routine == null) return null;
+
+        StopManagedTransition(key);
+        Coroutine startedRoutine = StartCoroutine(WrapTransition(key, routine));
+        activeTransitions[key] = startedRoutine;
+        return startedRoutine;
+    }
+
+    protected virtual void StopManagedTransition(object key)
+    {
+        if (key == null) return;
+
+        if (activeTransitions.TryGetValue(key, out Coroutine runningRoutine) && runningRoutine != null)
+        {
+            StopCoroutine(runningRoutine);
+        }
+
+        activeTransitions.Remove(key);
+    }
+
+    protected virtual IEnumerator WrapTransition(object key, IEnumerator routine)
+    {
+        yield return routine;
+
+        if (key != null)
+        {
+            activeTransitions.Remove(key);
+        }
     }
 }

@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class PanelSpawn : AnMonoBehaviour
 {
-    [SerializeField] protected GameObject truePanel;
-
-    [SerializeField] protected GameObject falsePanel;
+    [SerializeField] protected GameObject subjectName;
 
     protected GameObject obj;
 
     protected override void Start()
     {
         base.Start();
-        this.SpawnPanelTrueFalse(true);
+        this.SpawnPanelNameSubject(true);
     }
-    public virtual void SpawnPanelTrueFalse(bool value)
+    public virtual void SpawnPanelNameSubject(bool value)
     {
         if (value)
         {
-            this.SpawnPanel(truePanel);
-        }
-        else
-        {
-            this.SpawnPanel(falsePanel);
+            this.SpawnPanel(subjectName);
         }
     }
     protected virtual void SpawnPanel(GameObject gameObject)

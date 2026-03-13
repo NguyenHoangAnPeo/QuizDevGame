@@ -8,11 +8,13 @@ public class StartBtn : BaseBtn
 {
     protected override void OnClick()
     {
-        this.OnClickStart();
+        StartCoroutine(StartGame());
     }
-    public async void OnClickStart()
+    IEnumerator StartGame()
     {
-        await Task.Delay(500); // 1000ms = 1 giây
+        GameManager.Instance.EndTransitionScene();
+
+        yield return new WaitForSeconds(1.2f);
 
         SceneManager.LoadScene("MajorScene");
     }

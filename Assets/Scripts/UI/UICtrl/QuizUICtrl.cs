@@ -27,6 +27,12 @@ public class QuizUICtrl : AnMonoBehaviour
         if (GameStateManager.Instance == null) return;
         GameStateManager.Instance.OnStateChanged -= HandleStateChanged;
     }
+
+    protected override void Start()
+    {
+        base.Start();
+        GameManager.Instance.StartTransitionScene();
+    }
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -49,9 +55,9 @@ public class QuizUICtrl : AnMonoBehaviour
             GetComponentsInChildren<AnswerBtn>(true)
         );
     }
-    public void ShowQuestion(Question question)
+    public void ShowQuestion(Question question,int index)
     {
-        questionText.text = question.question;
+        questionText.text = "Câu "+index.ToString() + "/10: "+question.question;
 
         for (int i = 0; i < answerButtons.Count; i++)
         {
